@@ -126,5 +126,5 @@ function init() {}
 init();
 
 // Function call to generate question prompts
-// TO DO - fix this is not in the original challenge file
+// TO DO - fix - this is not in the original challenge file. Should questions be triggred by init?
 questions();

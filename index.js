@@ -5,7 +5,19 @@ const fs = require("fs");
 const generateMarkdown = require("./generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = () =>
+const questions = (
+    {
+  name,
+  github,
+  email,
+  title,
+  description,
+  installation,
+  usage,
+  contribution,
+  test,
+}
+) =>
   inquirer
     .prompt([
       {
@@ -61,7 +73,22 @@ const questions = () =>
         type: "list",
         message: "Select a licence for your project",
         name: "licence",
-        choices: [`None`, `Apache License 2.0`, `GNU General Public License v3.0`, `MIT License`, `BSD 2-Clause "Simplified" License`, `BSD 3-Clause "New" or "Revised" License`, `Boost Software License 1.0`, `Creative Commons Zero v1.0 Universal`, `Eclipse Public License 2.0`, 'GNU Affero General Public License v3.0', `GNU General Public License v2.0`, `GNU Lesser General Public License v2.1`, `Mozilla Public License 2.0`, `The Unlicense` ],
+        choices: [
+          `None`,
+          `Apache License 2.0`,
+          `GNU General Public License v3.0`,
+          `MIT License`,
+          `BSD 2-Clause "Simplified" License`,
+          `BSD 3-Clause "New" or "Revised" License`,
+          `Boost Software License 1.0`,
+          `Creative Commons Zero v1.0 Universal`,
+          `Eclipse Public License 2.0`,
+          "GNU Affero General Public License v3.0",
+          `GNU General Public License v2.0`,
+          `GNU Lesser General Public License v2.1`,
+          `Mozilla Public License 2.0`,
+          `The Unlicense`,
+        ],
       },
       {
         type: "editor",
@@ -73,19 +100,24 @@ const questions = () =>
         name: "test",
         message: `Add your test instructions`,
       },
-
     ])
-    //test creating file with json
+    //create fileName
     .then((data) => {
-      const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
 
-      fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-        err ? console.log(err) : console.log("Success!")
-      );
+    //TO DO fileName created from project title for testing - remove when published
+      const fileName = `README-${data.title.toLowerCase().split(" ").join("")}.json`;
+
+      writeToFile(fileName, data);
+
     });
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// pass filename and data to writeToFile
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, JSON.stringify(data, null, "\t"), (err) =>
+    err ? console.log(err) : console.log("README file created successfully!")
+  );
+}
 
 // TODO: Create a function to initialize app
 function init() {}

@@ -6,17 +6,17 @@ const generateMarkdown = require("./generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = (
-    {
-  name,
-  github,
-  email,
-  title,
-  description,
-  installation,
-  usage,
-  contribution,
-  test,
-}
+//     {
+//   name,
+//   github,
+//   email,
+//   title,
+//   description,
+//   installation,
+//   usage,
+//   contribution,
+//   test,
+// }
 ) =>
   inquirer
     .prompt([
@@ -105,7 +105,7 @@ const questions = (
     .then((data) => {
 
     //TO DO fileName created from project title for testing - remove when published
-      const fileName = `README-${data.title.toLowerCase().split(" ").join("")}.json`;
+      const fileName = `README-${data.title.toLowerCase().split(" ").join("")}.md`;
 
       writeToFile(fileName, data);
 
@@ -114,7 +114,7 @@ const questions = (
 // TODO: Create a function to write README file
 // pass filename and data to writeToFile
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, JSON.stringify(data, null, "\t"), (err) =>
+  fs.writeFile(fileName, generateMarkdown(data), (err) =>
     err ? console.log(err) : console.log("README file created successfully!")
   );
 }
@@ -126,4 +126,5 @@ function init() {}
 init();
 
 // Function call to generate question prompts
+// TO DO - fix this is not in the original challenge file
 questions();

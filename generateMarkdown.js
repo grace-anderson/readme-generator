@@ -11,25 +11,70 @@ function renderLicenseBadge(license) {
   }
 }
 
-// function that returns licence info from Open Source Initiative https://opensource.org/
-// open source api https://github.com/OpenSourceOrg/api
-// example url https://opensource.org/licenses/Apache-2.0
-// DONE - 1. test rendering hard coded url in markup -> update ReadMe syntax
-// DONE - 2. test using function to provide hard coded url
-// 2. test generating url using the open source license api https://github.com/OpenSourceOrg/api
+// function to return licence URL from Open Source Initiative (OSI) https://opensource.org/
 function renderLicenseOpenSourceUrl(license) {
   if (license === "None") {
     return ``;
   } else {
-    return `https://opensource.org/licenses/Apache-2.0`;
+    getLicenseOpenSourceUrl(license);
   }
 }
+
+//create license Url
+const getLicenseOpenSourceUrl = function (license) {
+  const licenseRequestUrl = ``;
+
+  if (license === `Creative Commons Zero v1.0 Universal`) {
+    licenseRequestUrl = `https://creativecommons.org/publicdomain/zero/1.0`;
+    return licenseRequestUrl;
+  } else {
+    const licenseUrl = getLicenceCodeForUrl(license);
+
+    licenseRequestUrl = `https://api.opensource.org/license/${licenseUrl}`;
+
+    return licenseRequestUrl;
+  }
+};
+
+//switch to get code for selected licence
+const getLicenceCodeForUrl = function (licence) {
+  switch (licence) {
+    case `Apache License 2.0`:
+      return `Apache-2.0`;
+    case `BSD 2 Clause`:
+      return `BSD-2`;
+    case `BSD 3 Clause`:
+      return `Boost Software License 1.0`;
+    case `Boost Software License 1.0`:
+      return "BSL-1.0";
+    case `Eclipse Public License 2.0`:
+      return `EPL-2.0`;
+    case `GNU Affero General Public License v3.0`:
+      return `AGPL-3.0`;
+    case `GNU General Public License v2.0`:
+      return `GPL-2.0`;
+    case `GNU General Public License v3.0`:
+      return `GPL-3.0`;
+    case `GNU Lesser General Public License v2.1`:
+      return `LGPL-2.1`;
+    case `MIT`:
+      return `MIT`;
+    case `Mozilla Public License 2.0`:
+      return `MPL-2.0`;
+    case `The Unlicense`:
+      return `unlicense`;
+    default:
+      return ``;
+  }
+};
 
 // function that generates markdown for README
 function generateMarkdown(answers) {
   return `# Project: ${answers.title}
 
-[![Project Licence](${renderLicenseBadge(answers.license)})](${renderLicenseOpenSourceUrl(answers.license)})
+[![Project Licence](${renderLicenseBadge(
+    answers.license
+  )})](${renderLicenseOpenSourceUrl(answers.license)})
   
 ## Table of Contents
 1. [Project Description](#project-description)

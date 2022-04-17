@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 }
 
 // function to return licence URL from Open Source Initiative (OSI) https://opensource.org/
-// clicking on badge opens OSI or other url info for license
+// clicking on badge opens license's OSI web page or other relevant web page
 let licenseRequestUrl = ``;
 
 function renderLicenseOpenSourceUrl(license) {
@@ -103,9 +103,9 @@ ${answers.contribution}
 ${answers.test}
 
 ## Questions 
-Contact the developer ${answers.name} at ${answers.email};
+Contact me ${answers.name} at ${answers.email};
 
-${answers.name}'s Github profile: TODO create url with github ${answers.github}
+See more of my work on Github at https://github.com/${answers.name}
   `;
 }
 

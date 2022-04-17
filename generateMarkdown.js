@@ -38,9 +38,9 @@ const getLicenceCodeForUrl = function (license) {
   switch (license) {
     case `Apache License 2.0`:
       return `Apache-2.0`;
-    case `BSD 2 Clause`:
+    case `BSD 2-Clause`:
       return `BSD-2-Clause`;
-    case `BSD 3 Clause`:
+    case `BSD 3-Clause`:
       return `BSD-3-Clause`;
     case `Boost Software License 1.0`:
       return "BSL-1.0";

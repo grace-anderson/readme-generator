@@ -1,6 +1,6 @@
-# Project: testing MIT licence
+# Project: testing hardcoded render licence function
 
-![Project Licence](https://img.shields.io/badge/License-MIT-brightgreen)
+[![Project Licence](https://img.shields.io/badge/License-Apache%20License%202.0-brightgreen)](https://opensource.org/licenses/Apache-2.0)
   
 ## Table of Contents
 1. [Project Description](#project-description)
@@ -12,7 +12,7 @@
 7. [Questions](#questions)
 
 ## Project Description 
-testing MIT license badge
+testing hardcoded render license function
 
 ## Installation
 
@@ -21,7 +21,7 @@ testing MIT license badge
 
 
 ## License
-This application is covered by MIT license.
+License covering this application: Apache License 2.0
 
 ## Contribution Guidelines
 
@@ -32,5 +32,5 @@ This application is covered by MIT license.
 ## Questions 
 Contact the developer helen at helen.g.anderson@me.com;
 
-helen's Github profile: TODO create url with github grace-anderson
+helen's Github profile: TODO create url with github hladfj- lda
   

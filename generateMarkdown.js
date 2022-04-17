@@ -95,7 +95,7 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-License covering this application: ${answers.license}
+License covering this application: [${answers.license}](${renderLicenseOpenSourceUrl(answers.license)})
 
 ## Contribution Guidelines
 ${answers.contribution}

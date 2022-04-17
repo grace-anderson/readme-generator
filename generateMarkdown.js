@@ -30,21 +30,21 @@ const getLicenseOpenSourceUrl = function (license) {
   } else {
     let licenseUrl = getLicenceCodeForUrl(license);
 
-    licenseRequestUrl = `https://api.opensource.org/license/${licenseUrl}`;
+    licenseRequestUrl = `https://opensource.org/licenses/${licenseUrl}`;
 
     return licenseRequestUrl;
   }
 };
 
-//switch to get code for selected licence
+//switch to get code for selected licencec
 const getLicenceCodeForUrl = function (license) {
   switch (license) {
     case `Apache License 2.0`:
       return `Apache-2.0`;
     case `BSD 2 Clause`:
-      return `BSD-2`;
+      return `BSD-2-Clause`;
     case `BSD 3 Clause`:
-      return `BSD-3`;
+      return `BSD-3-Clause`;
     case `Boost Software License 1.0`:
       return "BSL-1.0";
     case `Eclipse Public License 2.0`:
@@ -72,7 +72,7 @@ const getLicenceCodeForUrl = function (license) {
 function generateMarkdown(answers) {
   return `# Project: ${answers.title}
 
-[![Project Licence](${renderLicenseBadge(
+[![](${renderLicenseBadge(
     answers.license
   )})](${renderLicenseOpenSourceUrl(answers.license)})
   

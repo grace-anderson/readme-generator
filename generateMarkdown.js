@@ -1,11 +1,17 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-//https://img.shields.io/badge/License-Apache%20License%202.0-brightgreen
+// example badge url to get badge from shields.io - https://img.shields.io/badge/License-Apache%20License%202.0-brightgreen
 function renderLicenseBadge(license) {
-  return `https://img.shields.io/badge/License-${encodeURIComponent(license)}-brightgreen`
+  if (license === "None") {
+    return ``;
+  } else {
+    return `https://img.shields.io/badge/License-${encodeURIComponent(
+      license
+    )}-brightgreen`;
+  }
 }
 
-// TODO: Create a function to generate markdown for README
+// function that generates markdown for README
 function generateMarkdown(answers) {
   return `# Project: ${answers.title}
 

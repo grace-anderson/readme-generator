@@ -4,18 +4,6 @@ const fs = require("fs");
 //Require local module to generate markdown file
 const generateMarkdown = require("./generateMarkdown");
 
-function required(errorMessage) {
-  return  (userInput) => {
-    if (userInput) {
-      return true;
-    } else {
-      console.log(errorMessage);
-      return false;
-    }
-  }
-}
-
-
 //array of questions for user input
 const questions = () => {
   return inquirer.prompt([
@@ -23,29 +11,13 @@ const questions = () => {
       type: "input",
       name: "name",
       message: `What is your name?`,
-      validate: required('Your name is required'),
-      // validate: (nameInput) => {
-      //   if (nameInput) {
-      //     return true;
-      //   } else {
-      //     console.log("Your name is required");
-      //     return false;
-      //   }
-      // },
+      validate: requiredQuestions("Your name is required"),
     },
     {
       type: "input",
       name: "github",
       message: `What is your Github username?`,
-      validate: required("Your Github username is required"),
-      // validate: (githubInput) => {
-      //   if (githubInput) {
-      //     return true;
-      //   } else {
-      //     console.log("Your Github username is required");
-      //     return false;
-      //   }
-      // },
+      validate: requiredQuestions("Your Github username is required"),
     },
     {
       type: "input",
@@ -71,29 +43,13 @@ const questions = () => {
       type: "input",
       name: "title",
       message: `What is your project's title?`,
-      validate: required("Your project title is required"),
-      // validate: (titleInput) => {
-      //   if (titleInput) {
-      //     return true;
-      //   } else {
-      //     console.log("Your project title is required");
-      //     return false;
-      //   }
-      // },
+      validate: requiredQuestions("Your project title is required"),
     },
     {
       type: "input",
       name: "description",
       message: `Briefly describe your project`,
-      validate: required("Your project description is required"),
-      // validate: (descriptionInput) => {
-      //   if (descriptionInput) {
-      //     return true;
-      //   } else {
-      //     console.log("Your project description is required");
-      //     return false;
-      //   }
-      // },
+      validate: requiredQuestions("Your project description is required"),
     },
     {
       type: "editor",
@@ -145,14 +101,25 @@ const questions = () => {
   ]);
 };
 
-// initialize app, then use data entered by user to write readme file
+// initialize app, then use user input to write readme file
 const init = () => {
   questions()
-    // Use writeFileSync method to use promises instead of a callback function
     .then((answers) => fs.writeFileSync(`README.md`, generateMarkdown(answers)))
     .then(() => console.log("Successfully created README.md"))
     .catch((err) => console.error(err));
 };
 
-// Function call to initialize app
+//validate user input entered in questions
+function requiredQuestions(errorMessage) {
+  return (userInput) => {
+    if (userInput) {
+      return true;
+    } else {
+      console.log(errorMessage);
+      return false;
+    }
+  };
+}
+
+// kick off (initialize) app
 init();

@@ -105,7 +105,7 @@ ${answers.contribution}
 ${answers.test}
 
 ## Questions 
-Contact me ${answers.name} at ${answers.email}
+Contact the author, ${answers.name}, at ${answers.email}
 
 See more of my work on [GitHub](https://github.com/${answers.github})
 

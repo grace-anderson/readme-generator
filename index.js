@@ -4,6 +4,18 @@ const fs = require("fs");
 //Require local module to generate markdown file
 const generateMarkdown = require("./generateMarkdown");
 
+function required(errorMessage) {
+  return  (userInput) => {
+    if (userInput) {
+      return true;
+    } else {
+      console.log(errorMessage);
+      return false;
+    }
+  }
+}
+
+
 //array of questions for user input
 const questions = () => {
   return inquirer.prompt([
@@ -11,19 +23,44 @@ const questions = () => {
       type: "input",
       name: "name",
       message: `What is your name?`,
+      validate: required('Your name is required'),
+      // validate: (nameInput) => {
+      //   if (nameInput) {
+      //     return true;
+      //   } else {
+      //     console.log("Your name is required");
+      //     return false;
+      //   }
+      // },
     },
     {
       type: "input",
       name: "github",
-      message: `What is your github username?`,
+      message: `What is your Github username?`,
+      validate: required("Your Github username is required"),
+      // validate: (githubInput) => {
+      //   if (githubInput) {
+      //     return true;
+      //   } else {
+      //     console.log("Your Github username is required");
+      //     return false;
+      //   }
+      // },
     },
     {
       type: "input",
       name: "email",
       message: `What is your email?`,
       validate: (emailInput) => {
+        const validRegex =
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if (emailInput) {
-          return true;
+          if (emailInput.match(validRegex)) {
+            return true;
+          } else {
+            console.log(`: ${emailInput} is an invalid email address!`);
+            return false;
+          }
         } else {
           console.log("Your email address is required");
           return false;
@@ -34,11 +71,29 @@ const questions = () => {
       type: "input",
       name: "title",
       message: `What is your project's title?`,
+      validate: required("Your project title is required"),
+      // validate: (titleInput) => {
+      //   if (titleInput) {
+      //     return true;
+      //   } else {
+      //     console.log("Your project title is required");
+      //     return false;
+      //   }
+      // },
     },
     {
       type: "input",
       name: "description",
       message: `Briefly describe your project`,
+      validate: required("Your project description is required"),
+      // validate: (descriptionInput) => {
+      //   if (descriptionInput) {
+      //     return true;
+      //   } else {
+      //     console.log("Your project description is required");
+      //     return false;
+      //   }
+      // },
     },
     {
       type: "editor",

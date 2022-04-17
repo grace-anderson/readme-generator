@@ -12,9 +12,15 @@ function renderLicenseBadge(license) {
 
 // function to return licence URL from Open Source Initiative (OSI) https://opensource.org/
 // clicking on badge opens OSI or other url info for license
+let licenseRequestUrl = ``;
+
 function renderLicenseOpenSourceUrl(license) {
   if (license === "None") {
-    return `https://choosealicense.com/no-permission/`;
+    licenseRequestUrl = `https://choosealicense.com/no-permission/`;
+    return licenseRequestUrl;
+  } else if (license === `Creative Commons Zero v1.0 Universal`) {
+    licenseRequestUrl = `https://creativecommons.org/publicdomain/zero/1.0`;
+    return licenseRequestUrl;
   } else {
     return getLicenseOpenSourceUrl(license);
   }
@@ -22,18 +28,9 @@ function renderLicenseOpenSourceUrl(license) {
 
 //create license Url
 const getLicenseOpenSourceUrl = function (license) {
-  let licenseRequestUrl = ``;
-
-  if (license === `Creative Commons Zero v1.0 Universal`) {
-    licenseRequestUrl = `https://creativecommons.org/publicdomain/zero/1.0`;
-    return licenseRequestUrl;
-  } else {
-    let licenseUrl = getLicenceCodeForUrl(license);
-
-    licenseRequestUrl = `https://opensource.org/licenses/${licenseUrl}`;
-
-    return licenseRequestUrl;
-  }
+  let licenseUrl = getLicenceCodeForUrl(license);
+  licenseRequestUrl = `https://opensource.org/licenses/${licenseUrl}`;
+  return licenseRequestUrl;
 };
 
 //switch to get code for selected licencec
@@ -72,9 +69,9 @@ const getLicenceCodeForUrl = function (license) {
 function generateMarkdown(answers) {
   return `# Project: ${answers.title}
 
-[![](${renderLicenseBadge(
+[![](${renderLicenseBadge(answers.license)})](${renderLicenseOpenSourceUrl(
     answers.license
-  )})](${renderLicenseOpenSourceUrl(answers.license)})
+  )})
   
 ## Table of Contents
 1. [Project Description](#project-description)
@@ -95,7 +92,9 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-License covering this application: [${answers.license}](${renderLicenseOpenSourceUrl(answers.license)})
+License covering this application: [${
+    answers.license
+  }](${renderLicenseOpenSourceUrl(answers.license)})
 
 ## Contribution Guidelines
 ${answers.contribution}

@@ -1,7 +1,7 @@
-# Project: Testing BSD issue url
+# Project: Testing BSD licence urls
 
 
-[![](https://img.shields.io/badge/License-BSD%202-Clause-brightgreen)](https://opensource.org/licenses/)
+[![](https://img.shields.io/badge/License-BSD%202-Clause-brightgreen)](https://opensource.org/licenses/BSD-2-Clause)
 
 
 ## Table of Contents
@@ -14,7 +14,7 @@
 7. [Questions](#questions)
 
 ## Project Description 
-BSD license issue urls
+Testing BSD licence urls
 
 ## Installation
 
@@ -23,7 +23,7 @@ BSD license issue urls
 
 
 ## License
-License covering this application: [BSD 2-Clause](https://opensource.org/licenses/)
+License covering this application: [BSD 2-Clause](https://opensource.org/licenses/BSD-2-Clause)
 
 ## Contribution Guidelines
 

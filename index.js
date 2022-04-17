@@ -61,12 +61,6 @@ const questions = () => {
       name: "usage",
       message: `Add your usage information`,
     },
-    //TODO - how to get github's list of licences (see github "choose licence template")
-    // get by starting a repo and clicking on the button under "Choose a licence" (copied into index.html file)
-    //TODO - how to get the licence badges and links? Manually add, use npm package?
-    // github repo with links and badges https://gist.github.com/benkostr/fc3cd3760066db62598c9beefc259496
-    // also npm package, no badges https://www.npmjs.com/package/spdx-license-data
-    // use the shield.io api? https://shields.io/category/downloads -> added to github account - Shields.io
     {
       type: "list",
       message: "Select a licence for your project",

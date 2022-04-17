@@ -1,6 +1,5 @@
-// function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-// example badge url to get badge from shields.io - https://img.shields.io/badge/License-Apache%20License%202.0-brightgreen
+// function to return a license badge based on which license is passed in
+// If there is no license badge, return an empty string
 function renderLicenseBadge(license) {
   if (license === "None") {
     return ``;
@@ -12,11 +11,12 @@ function renderLicenseBadge(license) {
 }
 
 // function to return licence URL from Open Source Initiative (OSI) https://opensource.org/
+// clicking on badge opens OSI or other url info for license
 function renderLicenseOpenSourceUrl(license) {
   if (license === "None") {
     return ``;
   } else {
-    getLicenseOpenSourceUrl(license);
+    return getLicenseOpenSourceUrl(license);
   }
 }
 
@@ -37,14 +37,14 @@ const getLicenseOpenSourceUrl = function (license) {
 };
 
 //switch to get code for selected licence
-const getLicenceCodeForUrl = function (licence) {
-  switch (licence) {
+const getLicenceCodeForUrl = function (license) {
+  switch (license) {
     case `Apache License 2.0`:
       return `Apache-2.0`;
     case `BSD 2 Clause`:
       return `BSD-2`;
     case `BSD 3 Clause`:
-      return `Boost Software License 1.0`;
+      return `BSD-3`;
     case `Boost Software License 1.0`:
       return "BSL-1.0";
     case `Eclipse Public License 2.0`:

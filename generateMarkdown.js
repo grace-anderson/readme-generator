@@ -36,7 +36,7 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-This application is covered by ${answers.license} license.
+License covering this application: ${answers.license}
 
 ## Contribution Guidelines
 ${answers.contribution}

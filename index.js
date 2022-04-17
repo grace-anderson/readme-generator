@@ -10,19 +10,19 @@ const questions = () => {
     {
       type: "input",
       name: "name",
-      message: `What is your name?`,
+      message: `What is your name? (Required)`,
       validate: requiredQuestions("Your name is required"),
     },
     {
       type: "input",
       name: "github",
-      message: `What is your Github username?`,
+      message: `What is your Github username? (Required)`,
       validate: requiredQuestions("Your Github username is required"),
     },
     {
       type: "input",
       name: "email",
-      message: `What is your email?`,
+      message: `What is your email? (Valid email required)`,
       validate: (emailInput) => {
         const validRegex =
           /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -42,13 +42,13 @@ const questions = () => {
     {
       type: "input",
       name: "title",
-      message: `What is your project's title?`,
+      message: `What is your project's title? (Required)`,
       validate: requiredQuestions("Your project title is required"),
     },
     {
       type: "input",
       name: "description",
-      message: `Briefly describe your project`,
+      message: `Briefly describe your project (Required)`,
       validate: requiredQuestions("Your project description is required"),
     },
     {
@@ -75,9 +75,9 @@ const questions = () => {
         `None`,
         `Apache License 2.0`,
         `GNU General Public License v3.0`,
-        `MIT License`,
-        `BSD 2-Clause "Simplified" License`,
-        `BSD 3-Clause "New" or "Revised" License`,
+        `MIT`,
+        `BSD 2-Clause Simplified License`,
+        `BSD 3-Clause New or Revised License`,
         `Boost Software License 1.0`,
         `Creative Commons Zero v1.0 Universal`,
         `Eclipse Public License 2.0`,

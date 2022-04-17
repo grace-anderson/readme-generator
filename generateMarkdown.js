@@ -22,13 +22,13 @@ function renderLicenseOpenSourceUrl(license) {
 
 //create license Url
 const getLicenseOpenSourceUrl = function (license) {
-  const licenseRequestUrl = ``;
+  let licenseRequestUrl = ``;
 
   if (license === `Creative Commons Zero v1.0 Universal`) {
     licenseRequestUrl = `https://creativecommons.org/publicdomain/zero/1.0`;
     return licenseRequestUrl;
   } else {
-    const licenseUrl = getLicenceCodeForUrl(license);
+    let licenseUrl = getLicenceCodeForUrl(license);
 
     licenseRequestUrl = `https://api.opensource.org/license/${licenseUrl}`;
 

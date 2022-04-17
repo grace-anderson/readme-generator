@@ -69,10 +69,12 @@ const getLicenceCodeForUrl = function (license) {
 function generateMarkdown(answers) {
   return `# Project: ${answers.title}
 
+
 [![](${renderLicenseBadge(answers.license)})](${renderLicenseOpenSourceUrl(
     answers.license
   )})
-  
+
+
 ## Table of Contents
 1. [Project Description](#project-description)
 2. [Installation](#installation)
@@ -103,9 +105,10 @@ ${answers.contribution}
 ${answers.test}
 
 ## Questions 
-Contact me ${answers.name} at ${answers.email};
+Contact me ${answers.name} at ${answers.email}
 
-See more of my work on Github at https://github.com/${answers.name}
+See more of my work on [GitHub](https://github.com/${answers.github})
+
   `;
 }
 

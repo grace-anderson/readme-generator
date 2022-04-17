@@ -14,7 +14,7 @@ function renderLicenseBadge(license) {
 // clicking on badge opens OSI or other url info for license
 function renderLicenseOpenSourceUrl(license) {
   if (license === "None") {
-    return ``;
+    return `https://choosealicense.com/no-permission/`;
   } else {
     return getLicenseOpenSourceUrl(license);
   }

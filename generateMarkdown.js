@@ -4,9 +4,9 @@ function renderLicenseBadge(license) {
   if (license === "None") {
     return ``;
   } else {
-    return `https://img.shields.io/badge/License-${
-      encodeURIComponent(license.replace('-', ' '))
-    }-brightgreen`;
+    return `https://img.shields.io/badge/License-${encodeURIComponent(
+      license.replace("-", " ")
+    )}-brightgreen`;
   }
 }
 
@@ -67,7 +67,9 @@ const getLicenceCodeForUrl = function (license) {
 
 // function to ensure name has first letters capitalised
 function capitaliseName(name) {
-  return name.charAt(0).toUpperCase() + name.slice(1);
+  return name.replace(/\w\S*/g, function (nameCap) {
+    return nameCap.charAt(0).toUpperCase() + nameCap.substr(1).toLowerCase();
+  });
 }
 
 // function that generates markdown for README
@@ -110,9 +112,10 @@ ${answers.contribution}
 ${answers.test}
 
 ## Questions 
-Contact the author, ${capitaliseName(answers.name)}, at ${answers.email}
 
-See more of my work on [GitHub](https://github.com/${answers.github})
+If you have questions about the ${answers.title} project, feel free to [email](mailto:${answers.email}) the author, ${capitaliseName(answers.name)}.
+
+See more of ${capitaliseName(answers.name)}'s work on [GitHub](https://github.com/${answers.github})
 
   `;
 }

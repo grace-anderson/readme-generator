@@ -1,3 +1,7 @@
+//Require local modules
+const renderLicenseBadge = require("./renderLicenseBadge");
+const renderLicenseOpenSourceUrl = require("./renderLicenseOpenSourceUrl");
+
 // function to ensure name has first letters capitalised
 function capitaliseName(name) {
   return name.replace(/\w\S*/g, function (nameCap) {

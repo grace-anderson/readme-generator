@@ -73,10 +73,8 @@ const questions = () => {
       choices: [
         `None`,
         `Apache License 2.0`,
-        //issue URL not created correctly
         `BSD 2-Clause`,
         `BSD 3-Clause`,
-        //
         `Boost Software License 1.0`,
         `Creative Commons Zero v1.0 Universal`,
         `Eclipse Public License 2.0`,

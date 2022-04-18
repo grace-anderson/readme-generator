@@ -1,16 +1,4 @@
-// function to return a license badge based on which license is passed in
-// If license selected is None or default None is unchanged, return an empty string
-function renderLicenseBadge(license) {
-    if (license === "None") {
-      return ``;
-    } else {
-      return `https://img.shields.io/badge/License-${encodeURIComponent(
-        license.replace("-", " ")
-      )}-brightgreen`;
-    }
-  }
-  
-  // function to return licence URL from Open Source Initiative (OSI) https://opensource.org/
+ // function to return licence URL from Open Source Initiative (OSI) https://opensource.org/
   // clicking on badge opens license's OSI web page or another relevant web page
   let licenseRequestUrl = ``;
   
@@ -64,4 +52,5 @@ function renderLicenseBadge(license) {
         return ``;
     }
   };
-  
+
+  module.exports = renderLicenseOpenSourceUrl;

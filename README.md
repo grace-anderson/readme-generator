@@ -1,7 +1,7 @@
-# Project: Testing BSD licence urls
+# Project: testing badge url
 
 
-[![](https://img.shields.io/badge/License-BSD%202-Clause-brightgreen)](https://opensource.org/licenses/BSD-2-Clause)
+[![](https://img.shields.io/badge/License-BSD%202%20Clause-brightgreen)](https://opensource.org/licenses/BSD-2-Clause)
 
 
 ## Table of Contents
@@ -14,7 +14,7 @@
 7. [Questions](#questions)
 
 ## Project Description 
-Testing BSD licence urls
+test badge url
 
 ## Installation
 
@@ -32,8 +32,8 @@ License covering this application: [BSD 2-Clause](https://opensource.org/license
 
 
 ## Questions 
-Contact me Helen at helen.g.anderson@me.com
+Contact the author, helen, at helen.g.anderson@me.com
 
-See more of my work on [GitHub](https://github.com/grace-anderson)
+See more of my work on [GitHub](https://github.com/grace-a)
 
   

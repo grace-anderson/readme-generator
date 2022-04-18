@@ -1,6 +1,6 @@
 //Generate README markdown file
 // - user is prompted to answer questions
-// - README.md file is generated
+// - README.md file is generated using user's answers
 
 //Include packages needed for application
 const inquirer = require("inquirer");

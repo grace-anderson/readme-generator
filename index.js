@@ -7,7 +7,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 //Require local modules
-const generateMarkdown = require("./generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 //array of questions for user input
 const questions = () => {

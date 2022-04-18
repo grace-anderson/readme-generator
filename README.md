@@ -1,8 +1,8 @@
 
-# Project: testing utils folder
+# Project: testing new requiredQuestions module
 
 
-[![](https://img.shields.io/badge/License-The%20Unlicense-brightgreen)](https://opensource.org/licenses/unlicense)
+[![](https://img.shields.io/badge/License-GNU%20Lesser%20General%20Public%20License%20v2.1-brightgreen)](https://opensource.org/licenses/LGPL-2.1)
 
 
 ## Table of Contents
@@ -15,7 +15,7 @@
 7. [Questions](#questions)
 
 ## Project Description 
-util
+test requiredQuestions
 
 ## Installation
 
@@ -24,7 +24,7 @@ util
 
 
 ## License
-License covering this application: [The Unlicense](https://opensource.org/licenses/unlicense)
+License covering this application: [GNU Lesser General Public License v2.1](https://opensource.org/licenses/LGPL-2.1)
 
 ## Contribution Guidelines
 
@@ -34,7 +34,7 @@ License covering this application: [The Unlicense](https://opensource.org/licens
 
 ## Questions 
 
-If you have questions about the **testing utils folder** project, feel free to [email](mailto:helen.g.anderson@me.com) the author, Helen G Anderson.
+If you have questions about the **testing new requiredQuestions module** project, feel free to [email](mailto:helen.g.anderson@me.com) the author, Helen G Anderson.
 
 See more of Helen G Anderson's work on [GitHub](https://github.com/grace-anderson)
 

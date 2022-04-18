@@ -8,6 +8,7 @@ const fs = require("fs");
 
 //Require local modules
 const generateMarkdown = require("./utils/generateMarkdown");
+const requiredQuestions = require("./utils/requiredQuestions");
 
 //array of questions for user input
 const questions = () => {
@@ -107,18 +108,6 @@ const init = () => {
     .then(() => console.log("Successfully created README.md"))
     .catch((err) => console.error(err));
 };
-
-//validate user input entered in questions
-function requiredQuestions(errorMessage) {
-  return (userInput) => {
-    if (userInput) {
-      return true;
-    } else {
-      console.log(errorMessage);
-      return false;
-    }
-  };
-}
 
 // kick off (initialize) app
 init();

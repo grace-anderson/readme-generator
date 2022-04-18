@@ -1,7 +1,7 @@
-# Project: testing badge url with non-bsd licence
+# Project: testing badge url
 
 
-[![](https://img.shields.io/badge/License-Creative%20Commons Zero v1.0 Universal-brightgreen)](https://creativecommons.org/publicdomain/zero/1.0)
+[![](https://img.shields.io/badge/License-GNU%20Affero%20General%20Public%20License%20v3.0-brightgreen)](https://opensource.org/licenses/AGPL-3.0)
 
 
 ## Table of Contents
@@ -14,7 +14,7 @@
 7. [Questions](#questions)
 
 ## Project Description 
-badge url - non bsd
+test badge-non BSD licence
 
 ## Installation
 
@@ -23,7 +23,7 @@ badge url - non bsd
 
 
 ## License
-License covering this application: [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0)
+License covering this application: [GNU Affero General Public License v3.0](https://opensource.org/licenses/AGPL-3.0)
 
 ## Contribution Guidelines
 
@@ -34,6 +34,6 @@ License covering this application: [Creative Commons Zero v1.0 Universal](https:
 ## Questions 
 Contact the author, helen, at helen.g.anderson@me.com
 
-See more of my work on [GitHub](https://github.com/grace-anderson)
+See more of my work on [GitHub](https://github.com/grace-a)
 
   

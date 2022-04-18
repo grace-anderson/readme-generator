@@ -2,11 +2,11 @@
 // - user is prompted to answer questions
 // - README.md file is generated using user's answers
 
-//Include packages needed for application
+//Require packages needed for application
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-//Require local module to generate markdown file
+//Require local modules
 const generateMarkdown = require("./generateMarkdown");
 
 //array of questions for user input

@@ -1,13 +1,7 @@
 //Require local modules
 const renderLicenseBadge = require("./renderLicenseBadge");
 const renderLicenseOpenSourceUrl = require("./renderLicenseOpenSourceUrl");
-
-// function to ensure name has first letters capitalised
-function capitaliseName(name) {
-  return name.replace(/\w\S*/g, function (nameCap) {
-    return nameCap.charAt(0).toUpperCase() + nameCap.substr(1).toLowerCase();
-  });
-}
+const capitaliseName = require("./capitaliseName");
 
 // function that generates markdown for README
 const generateMarkdown = ({

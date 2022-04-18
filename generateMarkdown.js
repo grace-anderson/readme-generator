@@ -65,6 +65,11 @@ const getLicenceCodeForUrl = function (license) {
   }
 };
 
+// function to ensure name has first letters capitalised
+function capitaliseName(name) {
+  return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
 // function that generates markdown for README
 function generateMarkdown(answers) {
   return `# Project: ${answers.title}
@@ -105,7 +110,7 @@ ${answers.contribution}
 ${answers.test}
 
 ## Questions 
-Contact the author, ${answers.name}, at ${answers.email}
+Contact the author, ${capitaliseName(answers.name)}, at ${answers.email}
 
 See more of my work on [GitHub](https://github.com/${answers.github})
 

@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 }
 
 // function to return licence URL from Open Source Initiative (OSI) https://opensource.org/
-// clicking on badge opens license's OSI web page or other relevant web page
+// clicking on badge opens license's OSI web page or another relevant web page
 let licenseRequestUrl = ``;
 
 function renderLicenseOpenSourceUrl(license) {
@@ -73,13 +73,23 @@ function capitaliseName(name) {
 }
 
 // function that generates markdown for README
-function generateMarkdown(answers) {
-  return `# Project: ${answers.title}
+const generateMarkdown = ({
+  name,
+  github,
+  email,
+  title,
+  description,
+  installation,
+  usage,
+  license,
+  contribution,
+  test,
+}) =>
+  `
+# Project: ${title}
 
 
-[![](${renderLicenseBadge(answers.license)})](${renderLicenseOpenSourceUrl(
-    answers.license
-  )})
+[![](${renderLicenseBadge(license)})](${renderLicenseOpenSourceUrl(license)})
 
 
 ## Table of Contents
@@ -92,32 +102,35 @@ function generateMarkdown(answers) {
 7. [Questions](#questions)
 
 ## Project Description 
-${answers.description}
+${description}
 
 ## Installation
-${answers.installation}
+${installation}
 
 ## Usage
-${answers.usage}
+${usage}
 
 ## License
-License covering this application: [${
-    answers.license
-  }](${renderLicenseOpenSourceUrl(answers.license)})
+License covering this application: [${license}](${renderLicenseOpenSourceUrl(
+    license
+  )})
 
 ## Contribution Guidelines
-${answers.contribution}
+${contribution}
   
 ## Test Instructions
-${answers.test}
+${test}
 
 ## Questions 
 
-If you have questions about the ${answers.title} project, feel free to [email](mailto:${answers.email}) the author, ${capitaliseName(answers.name)}.
+If you have questions about the ${title} project, feel free to [email](mailto:${email}) the author, ${capitaliseName(
+    name
+  )}.
 
-See more of ${capitaliseName(answers.name)}'s work on [GitHub](https://github.com/${answers.github})
+See more of ${capitaliseName(
+    name
+  )}'s work on [GitHub](https://github.com/${github})
 
   `;
-}
 
 module.exports = generateMarkdown;

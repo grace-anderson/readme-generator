@@ -1,7 +1,7 @@
-# Project: testing badge url
+# Project: testing badge url with non-bsd licence
 
 
-[![](https://img.shields.io/badge/License-BSD%202%20Clause-brightgreen)](https://opensource.org/licenses/BSD-2-Clause)
+[![](https://img.shields.io/badge/License-Creative%20Commons Zero v1.0 Universal-brightgreen)](https://creativecommons.org/publicdomain/zero/1.0)
 
 
 ## Table of Contents
@@ -14,7 +14,7 @@
 7. [Questions](#questions)
 
 ## Project Description 
-test badge url
+badge url - non bsd
 
 ## Installation
 
@@ -23,7 +23,7 @@ test badge url
 
 
 ## License
-License covering this application: [BSD 2-Clause](https://opensource.org/licenses/BSD-2-Clause)
+License covering this application: [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0)
 
 ## Contribution Guidelines
 
@@ -34,6 +34,6 @@ License covering this application: [BSD 2-Clause](https://opensource.org/license
 ## Questions 
 Contact the author, helen, at helen.g.anderson@me.com
 
-See more of my work on [GitHub](https://github.com/grace-a)
+See more of my work on [GitHub](https://github.com/grace-anderson)
 
   

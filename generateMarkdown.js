@@ -54,7 +54,7 @@ ${test}
 
 ## Questions 
 
-If you have questions about the ${title} project, feel free to [email](mailto:${email}) the author, ${capitaliseName(
+If you have questions about the **${title}** project, feel free to [email](mailto:${email}) the author, ${capitaliseName(
     name
   )}.
 

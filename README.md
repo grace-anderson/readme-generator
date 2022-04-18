@@ -1,7 +1,7 @@
-# Project: testing name cap
+# Project: testing capitalise name and mailto
 
 
-[![](https://img.shields.io/badge/License-BSD%203%20Clause-brightgreen)](https://opensource.org/licenses/BSD-3-Clause)
+[![](https://img.shields.io/badge/License-Apache%20License%202.0-brightgreen)](https://opensource.org/licenses/Apache-2.0)
 
 
 ## Table of Contents
@@ -14,7 +14,7 @@
 7. [Questions](#questions)
 
 ## Project Description 
-name capitalisation
+cap name and mailto
 
 ## Installation
 
@@ -23,7 +23,7 @@ name capitalisation
 
 
 ## License
-License covering this application: [BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)
+License covering this application: [Apache License 2.0](https://opensource.org/licenses/Apache-2.0)
 
 ## Contribution Guidelines
 
@@ -32,8 +32,9 @@ License covering this application: [BSD 3-Clause](https://opensource.org/license
 
 
 ## Questions 
-Contact the author, Helen G Anderson, at helen.g.anderson@me.com
 
-See more of my work on [GitHub](https://github.com/grace-anderson)
+If you have questions about the testing capitalise name and mailto project, feel free to [email](mailto:helen.g.anderson@me.com) the author, Helen Grace Anderson.
+
+See more of Helen Grace Anderson's work on [GitHub](https://github.com/grace-anderson)
 
   

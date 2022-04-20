@@ -75,13 +75,13 @@ See more of Helen Anderson's work on [GitHub](https://github.com/grace-anderson)
 ## Screenshots
 
 ### Screenshot showing completed prompts with success message. Text entered in text editor is confirmed as saved in the app by 'Received' stated by the prompt
-![Screenshot showing completed prompts with success message. Text entered in text editor is confirmed as saved in the app by 'Received' stated by the prompt](/readme-generator/img/completed-prompts.png "Screenshot showing completed prompts with success message. Text entered in text editor is confirmed as saved in the app by 'Received' stated by the prompt")
+![Screenshot showing completed prompts with success message. Text entered in text editor is confirmed as saved in the app by 'Received' stated by the prompt](/readme-generator/img/completed-prompts.png)
 
 ### Text formatted in markdown entered into the text editor
-![Text formatted in markdown entered into the text editor](/readme-generator/img/formatted-markdown-in-text-editor.png "Text formatted in markdown entered into the text editor")
+![Text formatted in markdown entered into the text editor](/readme-generator/img/formatted-markdown-in-text-editor.png)
 
 ### Saving text entered into the text editor
-![Saving text entered into the text editor](/readme-generator/img/saving-text-entered-in-text-editor.png "Saving text entered into the text editor")
+![Saving text entered into the text editor](/readme-generator/img/saving-text-entered-in-text-editor.png)
 
 ### Preview of generated README showing license badge
-![Preview of generated README showing license badge](/readme-generator/img/readme-preview-with-license-badge.png "Preview of generated README showing license badge").
+![Preview of generated README showing license badge](/readme-generator/img/readme-preview-with-license-badge.png)

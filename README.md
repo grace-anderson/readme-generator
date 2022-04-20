@@ -28,7 +28,8 @@ A high-quality README is essential when creating an open source project on GitHu
 * You need a [GitHub](https://github.com/) account to access the README Generator code
 * Install the README generator by forking the [readme-generator GitHub repository](https://github.com/grace-anderson/readme-generator) and then cloning the fork to your local repository.
 * Then use your favourite command line tool (e.g. Visual Studio, Bash) to cd into the app folder. 
-* Run the app on the command line by entering `node index.js`. 
+* Install the necessary packages `npm install`
+* Run the app on the command line `node index.js`
 
 ## Usage
 * Watch this [video](https://drive.google.com/file/d/15Pljiea03gQkiEsWdFbSY-if3CEJi5Oj/view?usp=sharing) for instructions and a demonstration of the README Generator's functionality
